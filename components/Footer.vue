@@ -1,6 +1,6 @@
 <template>
   <div class="container flex footer">
-    <a href="">
+    <a href="https://github.com/MNBoy/nuxt-invoice-app" target="_blank">
       <p>GITHUB</p>
     </a>
   </div>
@@ -21,9 +21,8 @@ export default {};
     text-decoration: none;
 
     p {
-      color: #fff;
+      color: rgba(255, 255, 255, 0.493);
       font-weight: 300;
-      opacity: 0.3;
       cursor: pointer;
     }
   }
