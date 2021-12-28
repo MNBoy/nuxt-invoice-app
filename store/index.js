@@ -61,17 +61,18 @@ export const actions = {
     }
     const data = await response.json();
     // convert to array and add docId
+    let invoices = [];
     if (data) {
-      const invoices = Object.keys(data).map(key => {
+      invoices = Object.keys(data).map(key => {
         return {
           ...data[key],
           docId: key
         };
       });
     }
-
-    commit('INVOICE_LOADED');
     commit('SET_INVOICE_DATA', invoices);
+    commit('INVOICE_LOADED');
+
   },
   async GET_INVOICES({ commit, state }) {
     const response = await fetch(process.env.baseUrl + '/invoices.json');
