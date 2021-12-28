@@ -61,12 +61,14 @@ export const actions = {
     }
     const data = await response.json();
     // convert to array and add docId
-    const invoices = Object.keys(data).map(key => {
-      return {
-        ...data[key],
-        docId: key
-      };
-    });
+    if (data) {
+      const invoices = Object.keys(data).map(key => {
+        return {
+          ...data[key],
+          docId: key
+        };
+      });
+    }
 
     commit('INVOICE_LOADED');
     commit('SET_INVOICE_DATA', invoices);
