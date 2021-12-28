@@ -67,6 +67,7 @@ export const actions = {
         docId: key
       };
     });
+
     commit('INVOICE_LOADED');
     commit('SET_INVOICE_DATA', invoices);
   },
