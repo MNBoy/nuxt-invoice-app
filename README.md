@@ -17,7 +17,7 @@ $ npm run start
 $ npm run generate
 ```
 ### See Demo
-See [Invoice App](https://mn-invoice-app.herokuapp.com/).
+See [Invoice App](https://nuxt-invoice-app.vercel.app/).
 ***
 # Images
 ![Home](https://i.ibb.co/tP596RH/home.png)
